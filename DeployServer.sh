@@ -28,5 +28,5 @@ then
 wget -q https://raw.githubusercontent.com/pinguisl/LuckyBlocksDeployment/master/world2.tgz
 fi
 else
-echo “Not a correct input”
+echo Not a correct input
 fi
