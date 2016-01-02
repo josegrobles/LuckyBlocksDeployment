@@ -16,17 +16,14 @@ rm LuckyBlocksEssentials.tgz
 echo "Done"
 echo "Chose a map to Download:"
 echo "1.[Size:Small][Snow Themed]"
-echo "2.[Size:Huge}[Island Themed]"
+echo "2.[Size:Huge][Island Themed]"
 read downloadOption
 if [$downloadOption = 1];
 then
 wget -q https://raw.githubusercontent.com/pinguisl/LuckyBlocksDeployment/master/world1.tgz
-fi
-else
-if [$downloadOption = 2];
+elif [$downloadOption = 2];
 then
 wget -q https://raw.githubusercontent.com/pinguisl/LuckyBlocksDeployment/master/world2.tgz
-fi
 else
 echo "Not a correct input"
 fi
