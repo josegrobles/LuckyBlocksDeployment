@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
  BINDIR=$(dirname "$(readlink -fn "$0")")
  cd "$BINDIR"
 echo "Downloading Bukkit on the background"
@@ -13,17 +13,9 @@ mv LuckyBlocks.jar plugins/LuckyBlocks.jar
 wget -q https://raw.githubusercontent.com/pinguisl/LuckyBlocksDeployment/master/LuckyBlocksEssentials.tgz
 tar -zxf LuckyBlocksEssentials.tgz
 rm LuckyBlocksEssentials.tgz
-echo "Done"
-echo "Chose a map to Download:"
-echo "1.[Size:Small][Snow Themed]"
-echo "2.[Size:Huge][Island Themed]"
-read downloadOption
-if [$downloadOption = 1];
-then
-wget -q https://raw.githubusercontent.com/pinguisl/LuckyBlocksDeployment/master/world1.tgz
-elif [$downloadOption = 2];
-then
+mkdir world
+cd world
 wget -q https://raw.githubusercontent.com/pinguisl/LuckyBlocksDeployment/master/world2.tgz
-else
-echo "Not a correct input"
-fi
+tar -zxf world2.tgz
+rm world2.tgz
+echo "Done"
